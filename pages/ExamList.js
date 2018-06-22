@@ -16,13 +16,13 @@ class examList extends React.Component {
       if (exams) {
         return (
           <div>
-            <h2>每天, 自己要 reload 畫面, 才會看到新資料</h2>
+            <h2>     每天, 自己要 reload 畫面, 才會看到新資料</h2>
         
             <ul>
               {exams.concat().sort((a, b) => ((moment(a.dueDate) < moment(b.dueDate)) ? -1 : 1))
                 .map(exam =>
                   <li key={exam.id}>
-                    {'"' + exam.title + '"'} dued by {exam.dueDate} {' '}
+                    {'"' + exam.title + '"'} is due by {exam.dueDate} {' '}
                   </li>
                 )}
             </ul>
